@@ -8,7 +8,7 @@ $command=$_POST['command']; //test demo purposes
 $ssh = new Net_SSH2('192.168.2.103');
 
 if (!$ssh->login($username, $password)){
-	exit(alert ('Login Failed'));
+	exit('Login Failed');
 } 
 
 echo $ssh->exec($command);
