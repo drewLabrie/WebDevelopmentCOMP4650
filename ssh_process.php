@@ -6,7 +6,7 @@ $password=$_POST['pass'];
 $ip=$_POST['ipAddress'];
 $command=$_POST['command']; //test demo purposes
 
-$ssh = new Net_SSH2(ip);
+$ssh = new Net_SSH2($ip);
 
 if (!$ssh->login($username, $password)){
 	exit('Login Failed');
