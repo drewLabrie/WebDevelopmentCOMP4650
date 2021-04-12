@@ -16,19 +16,19 @@ $infoCheck = $_POST['firstInfo'];
 if (!$ssh->login($username, $password)){
 	exit('Login Failed');
 }
-
+echo "";
 if ($hostnameCheck){
 	echo $ssh->exec('hostname');
 }
-
+echo "";
 if ($ipCheck){
 	echo $ssh->exec('ifconfig -a');
 }
-
+echo "";
 if ($infoCheck){
 	echo $ssh->exec('lscpu');
 }
-
+echo "";
 echo $ssh->exec($command);
 
 
