@@ -33,8 +33,8 @@ if (isset($_POST['firstInfo']) && !empty($_POST['firstInfo'])){
 }
 
 if (isset($_POST['command']) && !empty($_POST['command'])){
-	echo $ssh->exec($command);
 	$command=$_POST['command'];
+	echo $ssh->exec($command);
 	
 }
 
