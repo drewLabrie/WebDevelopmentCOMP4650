@@ -39,7 +39,7 @@ if (isset($_POST['firstCommand']) && !empty($_POST['firstCommand'])){
 }
 
 $ssh = null;
-$ssh = new Net_SSH2('192.168.2.103');
+$ssh = new Net_SSH2('192.168.2.30');
 
 if (!$ssh->login($username, $password)){
 	exit('Login Failed');
