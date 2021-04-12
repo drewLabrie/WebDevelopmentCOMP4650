@@ -7,13 +7,13 @@ window.onload = function(){
 		var user = document.getElementById("username").value;
 		var pass = document.getElementById("password").value;
 		
-		if (user != "WIT"){
+		if (user != "Admin"){
 			
 			alert("incorrect username");
 			e.preventDefault();
 		}
 		
-		if (pass != "comp4650"){
+		if (pass != "Pass"){
 			
 			alert("incorrect password");
 			e.preventDefault();

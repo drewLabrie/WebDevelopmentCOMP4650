@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html>
-<body>
-  <div class="login" id="myLogin">
+	<head>
+		<link rel="stylesheet" href="webDevForm.css" />
+	</head>
+	<body>
 
-    <form method="post" action="ssh_process.php" class="form-container">
+		<form method="post" action="ssh_process.php" class="form-container">
+			<fieldset class="leftServerBox">
+				<h1>FTP Server</h1>
+				<h3>IP Address: 192.168.2.103</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info?<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton"></h4>
+			</fieldset>
+			
+			<fieldset class="leftServerBox">
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton"></h4>
+			</fieldset>
+			
+			<fieldset class="leftServerBox">
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton"></h4>
+			</fieldset>
+			
+			<fieldset class="leftServerBox">
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton"></h4>
+			</fieldset>
 
-      <div>
-	<label for="username"><b>Username</b></label>
-	<input type="text" placeholder="Enter Username" name="username" required>
-      </div>
-      <div>
-	<label for="pass"><b>Password</b></label>
-	<input type="password" placeholder="Enter Password" name="pass" required>
-      </div>
-	  <div>
-	  <label for="ipAddress"><b>IpAddress</b></label>
-	  <input type="text" placeholder="Enter IP" name="ipAddress" required>
-      <div>
-	<label for="command"><b>Enter a linux command:</b></label>
-	<input type="text" name="command">
-      </div>
-	<button type="submit" class="btn">Login</button>
+		</form>
 
-    </form>
-
-  </div>
-
-</body>
+	</body>
 </html>
