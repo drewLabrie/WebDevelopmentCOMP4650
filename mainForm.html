@@ -7,27 +7,19 @@
 	</head>
 	
 	<body>
-		<form method="get" action="serverConnection.php" id="networkForm">
+		<form method="get" action="page.html" id="networkForm">
 		<fieldset>
 		
-			<div>
-			<label>IP address
-			<input type="number" id="firstQuartet class="address">
-			.
-			<input type="number" id="secondQuartet class="address">
-			.
-			<input type="number" id="thirdQuartet class="address">
-			.
-			<input type="number" id="fourthQuartet class="address">
-			</label>
-			</div>
-			
-			<div>Which commands would you like to run?</div>
-			<div>
-			Find current server version?<input type="checkbox" >
-			</div>
-			
 			<img src="images/leopard.jpg" class="leopardLogo" />
+			<div class="loginBox">
+			<label for="username"><b>Username:</b></label>
+			<input type="text" placeholder="Enter Username" name="username" id="username" required>
+			<br/>
+			<label for="pass"><b>Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="pass" id="password" required>
+			<br/>
+			<input type="submit" >
+			</div>
 			
 		</fieldset>
 		
