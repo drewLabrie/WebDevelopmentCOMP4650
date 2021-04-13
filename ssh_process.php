@@ -15,6 +15,7 @@ if (isset($_POST['firstHostname']) && !empty($_POST['firstHostname'])){
 	$hostnameCheck = $_POST['firstHostname'];
 	if ($hostnameCheck){
 		echo $ssh->exec('hostname');
+		echo ("<br>");
 	}
 }
 
@@ -22,6 +23,7 @@ if (isset($_POST['firstIP']) && !empty($_POST['firstIP'])){
 	$ipCheck = $_POST['firstIP'];
 	if ($ipCheck){
 		echo $ssh->exec('ifconfig -a');
+		echo ("<br>");
 	}
 }
 
@@ -29,12 +31,14 @@ if (isset($_POST['firstInfo']) && !empty($_POST['firstInfo'])){
 	$infoCheck = $_POST['firstInfo'];
 	if ($infoCheck){
 		echo $ssh->exec('lscpu');
+		echo ("<br>");
 	}
 }
 
 if (isset($_POST['firstCommand']) && !empty($_POST['firstCommand'])){
 	$firstCommand = $_POST['firstCommand'];
 	echo $ssh->exec($firstCommand);
+	echo ("<br>");
 	
 }
 
