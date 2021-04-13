@@ -49,7 +49,36 @@ if (!$ssh->login($username, $password)){
 	exit('Login Failed');
 }
 
-echo $ssh->exec('hostname');
+if (isset($_POST['secondHostname']) && !empty($_POST['secondHostname'])){
+	$hostnameCheck = $_POST['secondHostname'];
+	if ($hostnameCheck){
+		echo $ssh->exec('hostname');
+		echo ("<br>");
+	}
+}
+
+if (isset($_POST['secondIP']) && !empty($_POST['secondIP'])){
+	$ipCheck = $_POST['secondIP'];
+	if ($ipCheck){
+		echo $ssh->exec('ifconfig -a');
+		echo ("<br>");
+	}
+}
+
+if (isset($_POST['secondInfo']) && !empty($_POST['secondInfo'])){
+	$infoCheck = $_POST['secondInfo'];
+	if ($infoCheck){
+		echo $ssh->exec('lscpu');
+		echo ("<br>");
+	}
+}
+
+if (isset($_POST['secondCommand']) && !empty($_POST['secondCommand'])){
+	$firstCommand = $_POST['secondCommand'];
+	echo $ssh->exec($firstCommand);
+	echo ("<br>");
+	
+}
 
 
 ?>
