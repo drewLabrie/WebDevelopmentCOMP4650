@@ -5,11 +5,13 @@
 		<link rel="stylesheet" href="webDevForm.css" />
 		<script src="networkManager.js"></script>
 	</head>
+	<!--do php login validation to connect to database-->
+	
+	
 	
 	<body>
-		<form method="get" action="page.html" id="networkForm">
+		<form method="get" action="mainForm.php" id="networkForm">
 		<fieldset>
-		
 			<img src="images/leopard.jpg" class="leopardLogo" />
 			<img src="images/leopard.jpg" />
 			<div class="projectHeader">
@@ -31,5 +33,16 @@
 		<div class="bottomHeaderTeam">Team Name: Network Outage</div>
 		<div class="bottomHeaderMembers">Group Members: Drew Labrie, Marcus Wong, Prarthna Bhaththiwala</div>
 	</body>
+	
+	
+	<!--
+	<body>
+	   Showing main page 
+	 
+	</body>
+	-->
+	
+	
+	
 </html>
 			
