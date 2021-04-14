@@ -2,11 +2,50 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="webDevForm.css" />
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+			.grid-container {
+  				display: grid;
+  				grid-template-columns: auto auto ;
+  				grid-gap: 10px;
+  				background-color: #e67451;
+  				padding: 10px;
+			}
+			.grid-container > div {
+ 				background-color: rgba(255, 255, 255, 0.8);
+  				text-align: center;
+  				padding: 20px 0;
+  				font-size: 15px;
+			}
+			.item1 {
+  				grid-row:  2;
+			}
+			.card {
+				max-width: 600px;
+				margin: 50px auto;
+				display: grid;
+				grid-gap: 1rem;
+				box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+  				width: 20%;
+				border-radius: 10px;
+			}
+			.card:hover {
+  				box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+			}
+			.container {
+				padding: 8px 8px;
+			}
+		</style>
 	</head>
 	<body>
 
 		<form method="post" action="ssh_process.php" class="form-container">
-			<fieldset class="leftServerBox">
+
+			<div class = "grid-container">
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
 				<h1>FTP Server</h1>
 				<h3>IP Address: 192.168.2.103</h3>
 				<h4>Request hostname?<input type="checkbox" class="requestButton" name="firstHostname"></h4>
@@ -14,9 +53,11 @@
 				<h4>Request server info?<input type="checkbox" class="requestButton" name="firstInfo"></h4>
 				<h4>Custom Command?<input type="text" class="requestButton" name="firstCommand"></h4>
 				<button type="submit" class="btn">Request Information</button>
-			</fieldset>
-			
-			<fieldset class="leftServerBox">
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
 				<h1>Mail Server</h1>
 				<h3>IP Address: 192.168.2.30</h3>
 				<h4>Request hostname?<input type="checkbox" class="requestButton" name="secondHostname"></h4>
@@ -24,9 +65,23 @@
 				<h4>Request server info<input type="checkbox" class="requestButton" name="secondInfo"></h4>
 				<h4>Custom Command?<input type="text" class="requestButton" name="secondCommand"></h4>
 				<button type="submit" class="btn">Request Information</button>
-			</fieldset>
-			
-			<fieldset class="leftServerBox">
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container" >
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton" name="command"></h4>
+				<button type="submit" class="btn">Request Information</button>	
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
 				<h1>Random Server</h1>
 				<h3>IP Address: blah blah blah</h3>
 				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
@@ -34,17 +89,9 @@
 				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
 				<h4>Custom Command?<input type="text" class="requestButton" name="command"></h4>
 				<button type="submit" class="btn">Request Information</button>
-			</fieldset>
-			
-			<fieldset class="leftServerBox">
-				<h1>Random Server</h1>
-				<h3>IP Address: blah blah blah</h3>
-				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
-				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
-				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
-				<h4>Custom Command?<input type="text" class="requestButton" name="command"></h4>
-				<button type="submit" class="btn">Request Information</button>
-			</fieldset>
+				</div>
+			</div>
+			</div>
 
 		</form>
 
