@@ -19,7 +19,7 @@ if (isset($_POST['firstHostname']) && !empty($_POST['firstHostname'])){
 	$hostnameCheck = $_POST['firstHostname'];
 	if ($hostnameCheck){
 		//echo $ssh->exec('hostname');
-		$hostname = $ssh->exec('hostname');
+		$first_hostname = $ssh->exec('hostname');
 		//echo ("<br>");
 	}
 }
@@ -28,8 +28,8 @@ if (isset($_POST['firstIP']) && !empty($_POST['firstIP'])){
 	$ipCheck = $_POST['firstIP'];
 	if ($ipCheck){
 		//echo $ssh->exec('ifconfig -a');
-		$ip = $ssh->exec("ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'");
-		$mac = $ssh->exec("ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'");
+		$first_ip = $ssh->exec("ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'");
+		$first_mac = $ssh->exec("ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'");
 		//echo ("<br>");
 	}
 }
@@ -38,8 +38,8 @@ if (isset($_POST['firstInfo']) && !empty($_POST['firstInfo'])){
 	$infoCheck = $_POST['firstInfo'];
 	if ($infoCheck){
 		//echo $ssh->exec('lscpu');
-		$mem = $ssh->exec("free | grep Mem | awk '{print $3/$2 * 100.0}'");
-		$cpu = $ssh->exec("top -n 1 -b | awk '/^%Cpu/{print $2}'");
+		$first_mem = $ssh->exec("free | grep Mem | awk '{print $3/$2 * 100.0}'");
+		$first_cpu = $ssh->exec("top -n 1 -b | awk '/^%Cpu/{print $2}'");
 		//echo ("<br>");
 	}
 }
@@ -47,7 +47,7 @@ if (isset($_POST['firstInfo']) && !empty($_POST['firstInfo'])){
 if (isset($_POST['firstService']) && !empty($_POST['firstService'])){
 	$infoCheck = $_POST['firstService'];
 	if ($infoCheck){
-		$status = $ssh->exec("systemctl show vsftpd.service --no-page | grep 'ActiveState' | cut -f2 -d=");
+		$first_status = $ssh->exec("systemctl show vsftpd.service --no-page | grep 'ActiveState' | cut -f2 -d=");
 		//echo ("<br>");
 	}
 }
@@ -70,7 +70,7 @@ if (isset($_POST['secondHostname']) && !empty($_POST['secondHostname'])){
 	$hostnameCheck = $_POST['secondHostname'];
 	if ($hostnameCheck){
 		//echo $ssh->exec('hostname');
-		$hostname = $ssh->exec('hostname');
+		$second_hostname = $ssh->exec('hostname');
 		//echo ("<br>");
 	}
 }
@@ -79,8 +79,8 @@ if (isset($_POST['secondIP']) && !empty($_POST['secondIP'])){
 	$ipCheck = $_POST['secondIP'];
 	if ($ipCheck){
 		//echo $ssh->exec('ifconfig -a');
-		$ip = $ssh->exec("ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'");
-		$mac = $ssh->exec("ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'");
+		$second_ip = $ssh->exec("ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'");
+		$second_mac = $ssh->exec("ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'");
 		//echo ("<br>");
 	}
 }
@@ -89,8 +89,8 @@ if (isset($_POST['secondInfo']) && !empty($_POST['secondInfo'])){
 	$infoCheck = $_POST['secondInfo'];
 	if ($infoCheck){
 		//echo $ssh->exec('lscpu');
-		$mem = $ssh->exec("free | grep Mem | awk '{print $3/$2 * 100.0}'");
-		$cpu = $ssh->exec("top -n 1 -b | awk '/^%Cpu/{print $2}'");
+		$second_mem = $ssh->exec("free | grep Mem | awk '{print $3/$2 * 100.0}'");
+		$second_cpu = $ssh->exec("top -n 1 -b | awk '/^%Cpu/{print $2}'");
 		//echo ("<br>");
 	}
 }
@@ -98,7 +98,7 @@ if (isset($_POST['secondInfo']) && !empty($_POST['secondInfo'])){
 if (isset($_POST['secondService']) && !empty($_POST['secondService'])){
 	$infoCheck = $_POST['secondService'];
 	if ($infoCheck){
-		$status = $ssh->exec(); //Need to implement Service on remote server
+		$second_status = $ssh->exec(); //Need to implement Service on remote server
 		//echo ("<br>");
 	}
 }
