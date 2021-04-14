@@ -9,12 +9,7 @@ $username='WIT';
 $password='comp4650';
 $ssh = new Net_SSH2('192.168.2.103');
 
-$hostname=null;
-$ip=null;
-$mac=null;
-$cpu=null;
-$mem=null;
-$status=null;
+$first_hostname = $first_ip = $first_mac = $first_cpu = $first_mem = $first_status = $second_hostname = $second_ip = $second_mac = $second_cpu = $second_mem = $second_status = null;
 
 
 if (!$ssh->login($username, $password)){
@@ -123,31 +118,58 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+table {
+	width: 50%;
+}
 </style>
 
 <table>	
 	<tr>
 		<th>IP</th>
-		<td><?php echo $ip;?></td>
+		<td><?php echo $first_ip;?></td>
 	</tr>
 	<tr>
 		<th>Hostname</th>
-		<td><?php echo $hostname;?></td>
+		<td><?php echo $first_hostname;?></td>
 	</tr>
 	<tr>
 		<th>MAC</th>
-		<td><?php echo $mac;?></td>
+		<td><?php echo $first_mac;?></td>
 	</tr>
 	<tr>
 		<th>Server Status</th>
-		<td><?php echo $status;?></td>
+		<td><?php echo $first_status;?></td>
 	</tr>
 	<tr>
 		<th rowspan="2">System Usage %</th>
-		<td><?php echo "CPU: $cpu";?></td>
+		<td><?php echo "CPU: $first_cpu";?></td>
 	</tr>
 	<tr>
-		<td><?php echo "Memory: $mem";?></td>
+		<td><?php echo "Memory: $first_mem";?></td>
 	</tr>
-
+</table>
+<table>	
+	<tr>
+		<th>IP</th>
+		<td><?php echo $second_ip;?></td>
+	</tr>
+	<tr>
+		<th>Hostname</th>
+		<td><?php echo $second_hostname;?></td>
+	</tr>
+	<tr>
+		<th>MAC</th>
+		<td><?php echo $second_mac;?></td>
+	</tr>
+	<tr>
+		<th>Server Status</th>
+		<td><?php echo $second_status;?></td>
+	</tr>
+	<tr>
+		<th rowspan="2">System Usage %</th>
+		<td><?php echo "CPU: $second_cpu";?></td>
+	</tr>
+	<tr>
+		<td><?php echo "Memory: $second_mem";?></td>
+	</tr>
 </table>
