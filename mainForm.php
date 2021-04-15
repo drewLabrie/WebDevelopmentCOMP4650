@@ -9,13 +9,14 @@
 	
 <?php
 	$message="";
+	echo "2";
 	if(count($_POST)>0){
 		echo "3";
 		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
-echo "Connected successfully";
+		echo "Connected successfully";
 		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
