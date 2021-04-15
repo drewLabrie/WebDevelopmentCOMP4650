@@ -53,7 +53,8 @@ if (isset($_POST['firstService']) && !empty($_POST['firstService'])){
 }
 
 if (isset($_POST['firstCommand']) && !empty($_POST['firstCommand'])){
-	$first_command = $_POST['firstCommand'];
+	$firstCommand = $_POST['firstCommand'];
+	$first_command = $ssh->exec($firstCommand);
 	//echo $ssh->exec($firstCommand);
 	//echo ("<br>");
 	
