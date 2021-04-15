@@ -87,6 +87,7 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="firstCommand"></h4>
 					<h5 id = "command1"></h5>
 				</div>
+				<button type="submit" class="requestButton">Request Information</button>	
 				</div>
 			</div>
 
@@ -117,10 +118,6 @@ if (!$validated){ ?>
 					<h5 id = "command2"></h5>
 				</div>
 				</div>
-			</div>
-			
-			<div>
-				<button type="submit" class="requestInfoButton">Request Information</button>	
 			</div>
 			
 			<div class="card" style="width:100%;max-width:500px;">
@@ -182,6 +179,7 @@ if (!$validated){ ?>
 			</div>
 
 			</div>
+
 			</fieldset>
 		</form>
 
