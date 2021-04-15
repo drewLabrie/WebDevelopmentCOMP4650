@@ -10,9 +10,7 @@
 <?php
 	$message="";
 	$validated = false;
-	echo "2";
 	if(count($_POST)>0){
-		echo "3";
 		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
@@ -22,12 +20,10 @@
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
 		$message = "Invalid Username or Password!";
-		echo($message);
 		} 
 		else {
 			$message = "You are successfully authenticated!";
 			$validated = true;
-			echo($message);
 		}
 }
 ?>
