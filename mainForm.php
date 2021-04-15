@@ -34,7 +34,7 @@
 
 if (!$validated){ ?>
 	<body>
-		<form method="get" action="" id="networkForm">
+		<form method="post" action="" id="networkForm">
 		<fieldset>
 		
 			<?php if($message == "You are successfully authenticated!"){ $validated=true; } ?>
