@@ -41,7 +41,7 @@ if (!$validated){ ?>
 
 	$message="";
 	if(count($_POST)>0){
-		$conn = mysqli_connect("192.168.2.10", "WIT", "comp4650", "WebDevelopmentDB");
+		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
 		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
