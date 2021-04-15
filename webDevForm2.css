@@ -81,4 +81,9 @@
 .container {
 	padding: 8px 8px;
 }
+.myDiv {
+	display: flex;
+	margin: auto;
+	width: 75%;
+}
 
