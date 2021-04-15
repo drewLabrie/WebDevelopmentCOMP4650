@@ -17,13 +17,14 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 		echo "Connected successfully";
-		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
+		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE userName='" . $_POST["username"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
 		$message = "Invalid Username or Password!";
-	} else {
-		$message = "You are successfully authenticated!";
-	}
+		} 
+		else {
+			$message = "You are successfully authenticated!";
+		}
 }
 ?>
 
