@@ -117,6 +117,7 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="secondCommand"></h4>
 					<h5 id = "command2"></h5>
 				</div>
+				<button type="submit" class="requestButton">Request Information</button>
 				</div>
 			</div>
 			
@@ -146,6 +147,7 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="thirdCommand"></h4>
 					<h5 id = "command3"></h5>
 				</div>
+				<button type="submit" class="requestButton">Request Information</button>
 				</div>
 			</div>
 
@@ -175,6 +177,7 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="fourthCommand"></h4>
 					<h5 id = "command4"></h5>
 				</div>
+				<button type="submit" class="requestButton">Request Information</button>
 				</div>
 			</div>
 
