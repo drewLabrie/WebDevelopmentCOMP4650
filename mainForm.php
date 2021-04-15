@@ -2,13 +2,16 @@
 
 	<head>
 		<title>Network Manager</title>
-		<link rel="stylesheet" href="webDevForm.css" />
-		<script src="networkManager.js"></script>
+		<link rel="stylesheet" href="webDevForm2.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 	</head>
 	<!--do php login validation to connect to database-->
 	
 	
-	
+<?php 
+	$validated = true;
+
+if (!$validated){ ?>
 	<body>
 		<form method="get" action="mainForm.php" id="networkForm">
 		<fieldset>
@@ -34,13 +37,70 @@
 		<div class="bottomHeaderMembers">Group Members: Drew Labrie, Marcus Wong, Prarthna Bhaththiwala</div>
 	</body>
 	
+<?php } else{ ?>
 	
-	<!--
 	<body>
-	   Showing main page 
-	 
+		<form method="post" action="ssh_process.php" class="form-container">
+			<div class = "grid-container">
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
+				<h1>FTP Server</h1>
+				<h3>IP Address: 192.168.2.103</h3>
+				<h4>Request Hostname?<input type="checkbox" class="requestButton" name="firstHostname"></h4>
+				<h4>Request Addressing Info?<input type="checkbox" class="requestButton" name="firstIP"></h4>
+				<h4>Request System Usage?<input type="checkbox" class="requestButton" name="firstInfo"></h4>
+				<h4>Request FTP Status?<input type="checkbox" class="requestButton" name="firstService"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton" name="firstCommand"></h4>
+				<button type="submit" class="btn">Request Information</button>
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
+				<h1>Mail Server</h1>
+				<h3>IP Address: 192.168.2.30</h3>
+				<h4>Request Hostname?<input type="checkbox" class="requestButton" name="secondHostname"></h4>
+				<h4>Request Addressing Info?<input type="checkbox" class="requestButton" name="secondIP"></h4>
+				<h4>Request System Usage?<input type="checkbox" class="requestButton" name="secondInfo"></h4>
+				<h4>Request SMTP Status?<input type="checkbox" class="requestButton" name="secondService"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton" name="secondCommand"></h4>
+				<button type="submit" class="btn">Request Information</button>
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request Hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request IP Address?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request System Usage?<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton" name="command"></h4>
+
+				<button type="submit" class="btn">Request Information</button>	
+				</div>
+			</div>
+
+			<div class="card" style="width:100%;max-width:500px;">
+				<div class="container">
+				<h1>Random Server</h1>
+				<h3>IP Address: blah blah blah</h3>
+				<h4>Request hostname?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request ip information?<input type="checkbox" class="requestButton"></h4>
+				<h4>Request server info<input type="checkbox" class="requestButton"></h4>
+				<h4>Custom Command?<input type="text" class="requestButton" name="command"></h4>
+				<button type="submit" class="btn">Request Information</button>
+				</div>
+			</div>
+			</div>
+
+				<button type="submit" class="btn">Request Information</button>
+
+		</form>
+
 	</body>
-	-->
+	
+<?php } ?>
 	
 	
 	

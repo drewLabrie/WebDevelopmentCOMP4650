@@ -36,11 +36,6 @@
 	padding: 10px;	
 }
 
-.leftServerBox{
-	width: 30%;
-	display: inline-block;
-}
-
 .requestOption{
 	display: inline-block;
 	float: left;
@@ -52,5 +47,38 @@
 	display: inline-block;
 	vertical-align: top;
 
+}
+
+.grid-container {
+  	display: grid;
+  	grid-template-columns: auto auto ;
+  	grid-gap: 10px;
+  	background-color: #e67451;
+  	padding: 10px;
+}
+.grid-container > div {
+ 	background-color: rgba(255, 255, 255, 0.8);
+  	text-align: center;
+  	padding: 20px 0;
+  	font-size: 15px;
+	}
+.item1 {
+  	grid-row:  2;
+}
+.card {
+	max-width: 600px;
+	margin: 50px auto;
+	display: grid;
+	grid-gap: 1rem;
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+  	width: 20%;
+	border-radius: 10px;
+}
+.card:hover {
+  	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+.container {
+	padding: 8px 8px;
 }
 
