@@ -9,6 +9,7 @@
 	
 <?php
 	$message="";
+	$validated = false;
 	echo "2";
 	if(count($_POST)>0){
 		echo "3";
@@ -34,8 +35,7 @@
 
 	
 <?php 
-	$validated = false;
-
+	
 if (!$validated){ ?>
 	<body>
 		<form method="post" action="" id="networkForm">
