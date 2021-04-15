@@ -12,10 +12,6 @@
 	$validated = false;
 	if(count($_POST)>0){
 		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
-		echo "Connected successfully";
 		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE userName='" . $_POST["username"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
