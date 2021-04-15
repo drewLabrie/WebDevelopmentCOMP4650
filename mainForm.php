@@ -87,7 +87,6 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="firstCommand"></h4>
 					<h5 id = "command1"></h5>
 				</div>
-				<button type="submit" class="btn">Request Information</button>
 				</div>
 			</div>
 
@@ -117,10 +116,13 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="secondCommand"></h4>
 					<h5 id = "command2"></h5>
 				</div>
-				<button type="submit" class="btn">Request Information</button>
 				</div>
 			</div>
-
+			
+			<div>
+				<button type="submit" class="requestInfoButton">Request Information</button>	
+			</div>
+			
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container" >
 				<h1>Random Server</h1>
@@ -147,7 +149,6 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="thirdCommand"></h4>
 					<h5 id = "command3"></h5>
 				</div>
-				<button type="submit" class="btn">Request Information</button>	
 				</div>
 			</div>
 
@@ -177,12 +178,10 @@ if (!$validated){ ?>
 					<h4>Custom Command?<input type="text" class="requestButton" name="fourthCommand"></h4>
 					<h5 id = "command4"></h5>
 				</div>
-				<button type="submit" class="btn">Request Information</button>
 				</div>
 			</div>
 
 			</div>
-				<button type="submit" class="btn">Request Information</button>
 			</fieldset>
 		</form>
 
