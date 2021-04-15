@@ -40,7 +40,9 @@ if (!$validated){ ?>
 <?php
 
 	$message="";
+	console.log(2);
 	if(count($_POST)>0){
+		console.log(4);
 		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
 		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
