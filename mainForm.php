@@ -110,7 +110,7 @@ if (!$validated){ ?>
 					<h5 id = "mem2"></h5>
 				</div>
 				<div class="myDiv">
-					<h4>Request FTP Status?<input type="checkbox" class="requestButton" name="secondService"></h4>
+					<h4>Request SMTP Status?<input type="checkbox" class="requestButton" name="secondService"></h4>
 					<h5 id = "service2"></h5>
 				</div>
 				<div class = "myDiv">
@@ -123,7 +123,7 @@ if (!$validated){ ?>
 			
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container" >
-				<h1>Random Server</h1>
+				<h1>Server3</h1>
 				<h3>IP Address: 192.168.2.40</h3>
 				<div class="myDiv">
 					<h4>Request Hostname?<input type="checkbox" class="requestButton" name="thirdHostname"></h4>
@@ -140,7 +140,7 @@ if (!$validated){ ?>
 					<h5 id = "mem3"></h5>
 				</div>
 				<div class="myDiv">
-					<h4>Request FTP Status?<input type="checkbox" class="requestButton" name="thirdService"></h4>
+					<h4>Request Service Status?<input type="checkbox" class="requestButton" name="thirdService"></h4>
 					<h5 id = "service3"></h5>
 				</div>
 				<div class = "myDiv">
@@ -153,7 +153,7 @@ if (!$validated){ ?>
 
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container">
-				<h1>Random Server</h1>
+				<h1>Web Server 2</h1>
 				<h3>IP Address: 192.168.2.50</h3>
 				<div class="myDiv">
 					<h4>Request Hostname?<input type="checkbox" class="requestButton" name="fourthHostname"></h4>
@@ -170,7 +170,7 @@ if (!$validated){ ?>
 					<h5 id = "mem4"></h5>
 				</div>
 				<div class="myDiv">
-					<h4>Request FTP Status?<input type="checkbox" class="requestButton" name="fourthService"></h4>
+					<h4>Request Apache Status?<input type="checkbox" class="requestButton" name="fourthService"></h4>
 					<h5 id = "service4"></h5>
 				</div>
 				<div class = "myDiv">
