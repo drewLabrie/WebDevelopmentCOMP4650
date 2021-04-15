@@ -64,7 +64,7 @@ if (!$validated){ ?>
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container">
 				<h1>FTP Server</h1>
-				<h3>IP Address: 192.168.2.103</h3>
+				<h3>IP Address: 192.168.2.20</h3>
 				<div class="myDiv">
 					<h4>Request Hostname?<input type="checkbox" class="requestButton" name="firstHostname"></h4>
 					<h5 id = "hostname1"></h5>
@@ -124,7 +124,7 @@ if (!$validated){ ?>
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container" >
 				<h1>Random Server</h1>
-				<h3>IP Address: blah blah blah</h3>
+				<h3>IP Address: 192.168.2.40</h3>
 				<div class="myDiv">
 					<h4>Request Hostname?<input type="checkbox" class="requestButton" name="thirdHostname"></h4>
 					<h5 id = "hostname3"></h5>
@@ -154,7 +154,7 @@ if (!$validated){ ?>
 			<div class="card" style="width:100%;max-width:500px;">
 				<div class="container">
 				<h1>Random Server</h1>
-				<h3>IP Address: blah blah blah</h3>
+				<h3>IP Address: 192.168.2.50</h3>
 				<div class="myDiv">
 					<h4>Request Hostname?<input type="checkbox" class="requestButton" name="fourthHostname"></h4>
 					<h5 id = "hostname4"></h5>
@@ -212,6 +212,20 @@ if (!$validated){ ?>
       		 		$("#mem2").html(data[11]);
       		 		$("#service2").html(data[12]);
       		 		$("#command2").html(data[13]);
+				$("#hostname3").html(data[14]);
+      		 		$("#ip3").html(data[15]);
+      		 		$("#mac3").html(data[16]);
+      		 		$("#cpu3").html(data[17]);
+      		 		$("#mem3").html(data[18]);
+      		 		$("#service3").html(data[19]);
+      		 		$("#command3").html(data[20]);
+				$("#hostname4").html(data[21]);
+      		 		$("#ip4").html(data[22]);
+      		 		$("#mac4").html(data[23]);
+      		 		$("#cpu4").html(data[24]);
+      		 		$("#mem4").html(data[25]);
+      		 		$("#service4").html(data[26]);
+      		 		$("#command4").html(data[27]);
       		 	}
       		 });
 
