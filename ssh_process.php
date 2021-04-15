@@ -9,7 +9,7 @@ $username='WIT';
 $password='comp4650';
 $ssh = new Net_SSH2('192.168.2.103');
 
-$first_hostname = $first_ip = $first_mac = $first_cpu = $first_mem = $first_status = $second_hostname = $second_ip = $second_mac = $second_cpu = $second_mem = $second_status = null;
+$first_hostname = $first_ip = $first_mac = $first_cpu = $first_mem = $first_status = $firstCommand = $second_hostname = $second_ip = $second_mac = $second_cpu = $second_mem = $second_status = $secondCommand= null;
 
 
 if (!$ssh->login($username, $password)){
@@ -54,8 +54,8 @@ if (isset($_POST['firstService']) && !empty($_POST['firstService'])){
 
 if (isset($_POST['firstCommand']) && !empty($_POST['firstCommand'])){
 	$firstCommand = $_POST['firstCommand'];
-	echo $ssh->exec($firstCommand);
-	echo ("<br>");
+	//echo $ssh->exec($firstCommand);
+	//echo ("<br>");
 	
 }
 
@@ -98,78 +98,16 @@ if (isset($_POST['secondInfo']) && !empty($_POST['secondInfo'])){
 if (isset($_POST['secondService']) && !empty($_POST['secondService'])){
 	$infoCheck = $_POST['secondService'];
 	if ($infoCheck){
-		$second_status = $ssh->exec(); //Need to implement Service on remote server
+		$second_status = $ssh->exec("systemctl show sshd --no-page | grep 'ActiveState' | cut -f2 -d="); //Currently shows status of ssh daemon
 		//echo ("<br>");
 	}
 }
 
 if (isset($_POST['secondCommand']) && !empty($_POST['secondCommand'])){
-	$firstCommand = $_POST['secondCommand'];
-	echo $ssh->exec($firstCommand);
-	echo ("<br>");
+	$secondCommand = $_POST['secondCommand'];
 	
 }
-
+$array = array($first_hostname, $first_ip, $first_mac, $first_cpu, $first_mem, $first_status, $firstCommand, $second_hostname, $second_ip, $second_mac, $second_cpu, $second_mem, $second_status, $secondCommand);
+echo json_encode($array); //encode for ajax to process
 
 ?>
-
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-table {
-	width: 50%;
-}
-</style>
-
-<table>	
-	<tr>
-		<th>IP</th>
-		<td><?php echo $first_ip;?></td>
-	</tr>
-	<tr>
-		<th>Hostname</th>
-		<td><?php echo $first_hostname;?></td>
-	</tr>
-	<tr>
-		<th>MAC</th>
-		<td><?php echo $first_mac;?></td>
-	</tr>
-	<tr>
-		<th>Server Status</th>
-		<td><?php echo $first_status;?></td>
-	</tr>
-	<tr>
-		<th rowspan="2">System Usage %</th>
-		<td><?php echo "CPU: $first_cpu";?></td>
-	</tr>
-	<tr>
-		<td><?php echo "Memory: $first_mem";?></td>
-	</tr>
-</table>
-<table>	
-	<tr>
-		<th>IP</th>
-		<td><?php echo $second_ip;?></td>
-	</tr>
-	<tr>
-		<th>Hostname</th>
-		<td><?php echo $second_hostname;?></td>
-	</tr>
-	<tr>
-		<th>MAC</th>
-		<td><?php echo $second_mac;?></td>
-	</tr>
-	<tr>
-		<th>Server Status</th>
-		<td><?php echo $second_status;?></td>
-	</tr>
-	<tr>
-		<th rowspan="2">System Usage %</th>
-		<td><?php echo "CPU: $second_cpu";?></td>
-	</tr>
-	<tr>
-		<td><?php echo "Memory: $second_mem";?></td>
-	</tr>
-</table>
