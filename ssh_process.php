@@ -105,7 +105,8 @@ if (isset($_POST['secondService']) && !empty($_POST['secondService'])){
 }
 
 if (isset($_POST['secondCommand']) && !empty($_POST['secondCommand'])){
-	$second_command = $_POST['secondCommand'];
+	$secondCommand = $_POST['secondCommand'];
+	$second_command = $ssh->exec($secondCommand);
 	
 }
 
@@ -154,7 +155,8 @@ if (isset($_POST['thirdService']) && !empty($_POST['thirdService'])){
 }
 
 if (isset($_POST['thirdCommand']) && !empty($_POST['thirdCommand'])){
-	$third_command = $_POST['thirdCommand'];
+	$thirdCommand = $_POST['thirdCommand'];
+	$third_command = $ssh->exec($thirdCommand);
 	
 }
 
@@ -203,7 +205,8 @@ if (isset($_POST['fourthService']) && !empty($_POST['fourthService'])){
 }
 
 if (isset($_POST['fourthCommand']) && !empty($_POST['fourthCommand'])){
-	$fourth_command = $_POST['fourthCommand'];
+	$fourthCommand = $_POST['fourthCommand'];
+	$fourth_command = $ssh->exec($fourthCommand);
 	
 }
 $array = array($first_hostname, $first_ip, $first_mac, $first_cpu, $first_mem, $first_status, $first_command, $second_hostname, $second_ip, $second_mac, $second_cpu, $second_mem, $second_status, $second_command, $third_hostname, $third_ip, $third_mac, $third_cpu, $third_mem, $third_status, $third_command, $fourth_hostname, $fourth_ip, $fourth_mac, $fourth_cpu, $fourth_mem, $fourth_status, $fourth_command);
