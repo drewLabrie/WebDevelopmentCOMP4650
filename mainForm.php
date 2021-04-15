@@ -7,14 +7,31 @@
 	</head>
 	<!--do php login validation to connect to database-->
 	
+<?php
+	$message="";
+	if(count($_POST)>0){
+		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
+		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
+		$count  = mysqli_num_rows($result);
+		if($count==0) {
+		$message = "Invalid Username or Password!";
+	} else {
+		$message = "You are successfully authenticated!";
+	}
+}
+?>
+
+
 	
 <?php 
 	$validated = false;
 
 if (!$validated){ ?>
 	<body>
-		<form method="get" action="mainForm.php" id="networkForm">
+		<form method="get" action="" id="networkForm">
 		<fieldset>
+		
+			<?php if($message == "You are successfully authenticated!"){ $validated=true; } ?>
 			<img src="images/leopard.jpg" class="leopardLogo" />
 			<img src="images/leopard.jpg" />
 			<div class="projectHeader">
@@ -37,28 +54,7 @@ if (!$validated){ ?>
 		<div class="bottomHeaderMembers">Group Members: Drew Labrie, Marcus Wong, Prarthna Bhaththiwala</div>
 	</body>
 	
-<?php
-
-	$message="";
-	console.log(2);
-	if(count($_POST)>0){
-		console.log(4);
-		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
-		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["pass"]."'");
-		$count  = mysqli_num_rows($result);
-		if($count==0) {
-		$message = "Invalid Username or Password!";
-	} else {
-		$message = "You are successfully authenticated!";
-	}
-	
-	console.log($message);
-}
-
-
-
-
- } else{ ?>
+<?php } else{ ?>
 	
 	<body>
 		<form method="post" action="ssh_process.php" class="form-container">
