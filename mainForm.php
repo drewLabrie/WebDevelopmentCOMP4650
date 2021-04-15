@@ -191,7 +191,6 @@ if (!$validated){ ?>
 
       $(document).ready(function(){
      	 $("#myForm").submit(function(e){
-      	 	alert("form is submitted")
       		 e.preventDefault();
       		 $.ajax({
       		 	url: $(this).attr('action'),
