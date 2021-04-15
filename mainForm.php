@@ -25,6 +25,7 @@
 		} 
 		else {
 			$message = "You are successfully authenticated!";
+			$validated = true;
 			echo($message);
 		}
 }
@@ -40,7 +41,6 @@ if (!$validated){ ?>
 		<form method="post" action="" id="networkForm">
 		<fieldset>
 		
-			<?php if($message == "You are successfully authenticated!"){ $validated=true; } ?>
 			<img src="images/leopard.jpg" class="leopardLogo" />
 			<img src="images/leopard.jpg" />
 			<div class="projectHeader">
