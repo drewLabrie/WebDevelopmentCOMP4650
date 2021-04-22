@@ -6,22 +6,16 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	</head>
-	<!--do php login validation to connect to database-->
 	
 <?php
-	$message="";
 	$validated = false;
 	if(count($_POST)>0){
 		$conn = mysqli_connect("localhost","root","", "WebDevelopmentDB");
 		$result = mysqli_query($conn, "SELECT * FROM UserAccounts WHERE userName='" . $_POST["username"] . "' and password = '". $_POST["pass"]."'");
 		$count  = mysqli_num_rows($result);
-		if($count==0) {
-		$message = "Invalid Username or Password!";
-		} 
-		else {
-			$message = "You are successfully authenticated!";
+		if($count>0) {
 			$validated = true;
-		}
+		} 
 }
 ?>
 
