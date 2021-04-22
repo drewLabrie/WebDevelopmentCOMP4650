@@ -1,4 +1,4 @@
-(# WebDevelopmentCOMP4650
+# WebDevelopmentCOMP4650
 
 
 # Architecture Setup
