@@ -17,12 +17,16 @@
 ## Remote servers 
 1. Downloaded CentOS https://www.centos.org/download/
 2. Configured and started the four virtual machines with appropriate IP addressing and attached the 'LAN' private adapter configured previously to ensure communication
-3. Installed appropriate services (SSHd, httpd, vsftpd, etc) to be viewed
-4. Configured user credentials of 'WIT' and 'comp4650' as password across all VMs, for SSH access by the program
+3. IP Addresses for the machines are as follows: 192.168.2.20, 192.168.2.30, 192.168.2.40, 192.168.2.50 all with a mask of /24
+4. Installed appropriate services (SSHd, httpd, vsftpd, etc) to be viewed
+5. Configured user credentials of 'WIT' and 'comp4650' as password across all VMs, for SSH access by the program
 ## Web Server
 1. Downloaded CentOS https://www.centos.org/download/
 2. Configured with static address of 192.168.2.10 and attached the 'LAN' private adapter
 3. Installed LAMP https://www.apachefriends.org/index.html
 4. Installed Git and cloned our repository
 
-
+# Web Application
+1. All files need to be extracted/ cloned to the /opt/lampp/htdocs directory on the web server
+2. Web server can be started with sudo /opt/lampp/lampp start
+3. Once started, the web application can be accessed at 192.168.2.10 while connected on VPN or on the host machine
